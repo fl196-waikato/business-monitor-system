@@ -1,0 +1,29 @@
+business-monitor-system/
+-----backend/
+|
+|---server.js
+|---.env
+|---package.json
+|
+|---config/
+|      ---db.js            # MongoDB connection setup
+|
+|---models/
+|      ---user.js          # User schema for MongoDB
+|
+|---routes/
+       ---authRoutes.js    # Login/register/change profile routes
+       ---adminRoutes.js   # Admin-only actions(create/delete users)
+|
+|---controllers/
+|      ---authController.js # Functions for login, register, etc
+|      ---adminController.js # Functions for admin APIs
+|
+|---middleware/
+|      ---authMiddleware.js  # Protect routes, check user permissions
+
+-----fronted/
+│── public/
+│── src/
+│── package.json
+│── ...
