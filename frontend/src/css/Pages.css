@@ -1,0 +1,69 @@
+body, html, #root {
+    height: 100%;
+    margin: 0;
+  }
+  
+  div {
+    background-image: url('../assets/green_background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  </*CSS for Login and ResetPassword pages */>
+
+  form {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 80px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  .label{
+    font-size:15px;
+    font-weight: bolder;
+  }
+
+  td button{
+    margin:0 10px;
+    font-size: 15px;
+    font-weight: bolder;
+  }
+
+  /*CSS for Home page */
+  /* Header */
+  .header{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding:10px 20px;
+    background-color:darkseagreen;
+    color:white;
+    height: 30px;
+  }
+  /* Sidebar */
+  .sidebar{
+    display:flex;
+    justify-content:left;
+    align-items: center;
+    padding: 0px 30px 0px 0px;
+    border-radius: 3px;
+    border-color:darkseagreen;
+    color:black ;
+    font-size: 15px;
+  }
+
+  .list{
+    list-style-type: none;
+    padding: 10px 20px;
+    margin:0px;
+  }
+
+  .selectedItem{
+    margin-bottom: 10px;
+    cursor:pointer;
+  }
+
