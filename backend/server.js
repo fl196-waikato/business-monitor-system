@@ -1,6 +1,7 @@
 const express=require('express');
 const cors = require('cors');
 require('dotenv').config();
+const authRoutes = require('./routes/authoritise'); // 引入认证相关的路由
 
 const app =express();
 
@@ -12,6 +13,8 @@ app.use(express.json());
 app.get('/',(req,res)=>{
     res.send('Server is running');
 });
+// 配置路由
+app.use('/api', authRoutes); // 所有以 /api 开头的请求都会被 authRoutes 处理
 
 //Start server
 const PORT = process.env.PORT||3000;
