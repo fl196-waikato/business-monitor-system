@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import LoginPage from './pages/Login';
+import RegisterAccountPage from './pages/RegisterAccount';
 import ResetPasswordPage from './pages/ResetPassword';
 import HomePage from './pages/Homepage';
 import ProductManagement from './pages/ProductManagement';
@@ -14,6 +15,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element= {<LoginPage />} />
+        <Route path="/register" element= {<RegisterAccountPage />} />
         <Route path="/reset-password" element= {<ResetPasswordPage />} />
         {/*
         <Route path="/home" element= {<HomePage />} />

@@ -1,7 +1,9 @@
+console.log('✅ server.js 已启动');
+
 const express=require('express');
 const cors = require('cors');
 require('dotenv').config();
-const authRoutes = require('./routes/authoritise'); // 引入认证相关的路由
+const authRoutes = require('./routes/auth'); // 引入认证相关的路由
 
 const app =express();
 

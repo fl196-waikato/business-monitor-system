@@ -19,9 +19,10 @@ function LoginPage() {
                   <td></td>
                   <td colSpan="2" style={{textAlign: "cente"}}>
                       <button type="submit">Log in</button>
-                      <button type="button" onClick={()=>{window.location.href='/'}}>Cancel</button>
+                      <button type="button" onClick={()=>{window.location.href='/register'}}>Register</button>
                   </td>
               </tr>
+              
             </tbody>
           </table>
       </form>
