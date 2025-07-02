@@ -10,6 +10,7 @@ const register = async (req, res) => {
   try {
     // 查询员工信息
     const employee = await employeeModel.findEmployeeByEmployeeID(employee_id,employee_name,employee_email);
+    console.log("the employee has been checked in the table Employees");
     if(!employee){
         return res.status(404).json({message: 'Employee not found'}); // 如果员工信息不存在,返回404
     }         
@@ -17,7 +18,7 @@ const register = async (req, res) => {
     // 将用户注册信息存入用户信息表
     const newUser = await employeeModel.insertUser(employee_email,password);
     // 注册成功,返回用户ID,用户token
-    return res.status(200).json({ message: 'Register successful', userId: newUser.result.insertId ,userToken: newUser.user_token});
+    res.status(200).json({ message: 'Register successful', userId: newUser.result.insertId ,userToken: newUser.user_token});
   } catch (error) {
     console.error('❌ DB Error:', error.code, error.message);
 

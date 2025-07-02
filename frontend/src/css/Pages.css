@@ -1,9 +1,11 @@
+
+
 body, html, #root {
     height: 100%;
     margin: 0;
   }
   
-  div {
+  .login-container,.register-container, .reset-password-container {
     background-image: url('../assets/green_background.jpg'); 
     background-size: cover;
     background-position: center;
@@ -14,7 +16,7 @@ body, html, #root {
     align-items: center;
   }
   
-  </*CSS for Login and ResetPassword pages, RegisterAccountPage */>
+  </*CSS for Login and ResetPassword pages, RegisterAccountPage */ >
 
   form {
     background-color: rgba(255, 255, 255, 0.85);
@@ -31,11 +33,11 @@ body, html, #root {
     margin:0 10px;
     font-size: 15px;
     font-weight: bolder;
-  }
+  } 
 
   /*CSS for Home page */
   /* Header */
-  .header{
+  /*.header{
     display:flex;
     justify-content:space-between;
     align-items: center;
@@ -44,7 +46,7 @@ body, html, #root {
     color:white;
     height: 30px;
   }
-  /* Sidebar */
+  /* Sidebar 
   .sidebar{
     display:flex;
     justify-content:left;
@@ -65,5 +67,5 @@ body, html, #root {
   .selectedItem{
     margin-bottom: 10px;
     cursor:pointer;
-  }
+  }*/
 

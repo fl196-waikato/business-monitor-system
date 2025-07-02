@@ -35,17 +35,23 @@ function RegisterAccountPage(){
             },
             body: JSON.stringify(formData)
         })
-            .then(res => res.json())
-            .then(data => {
-                alert('Registration successful!');
-                window.location.href = '/';
+          .then(async res => {
+                const data = await res.json();
+                if(res.status === 200){
+                   alert('Registration successful!');
+                   window.location.href = '/';
+                }
+                else{   
+                    setErrorMessage(data.message || 'An error occurred. Please try again.');
+                }
             })
             .catch(err =>{
                 setErrorMessage('Registration failed. Please try again.');
             });
+            
     };
     return (
-        <div>
+        <div className="register-container">
             <form onSubmit = {handleSubmit}>
                 <table id="register-account" name="register-account">
                     <tbody>

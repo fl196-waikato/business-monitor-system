@@ -15,6 +15,11 @@ app.use(express.json());
 app.get('/',(req,res)=>{
     res.send('Server is running');
 });
+
+app.use((req, res, next) => {
+  console.log('收到请求:', req.method, req.url);
+  next();
+});
 // 配置路由
 app.use('/api', authRoutes); // 所有以 /api 开头的请求都会被 authRoutes 处理
 

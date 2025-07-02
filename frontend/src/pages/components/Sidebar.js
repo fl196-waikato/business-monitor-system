@@ -1,6 +1,6 @@
 import '../../css/Pages.css';
 
-const Sidebar=({onSelect}) => {
+const Sidebar=({onSelect, selectedItem}) => {
     const list=[
         "Product Management",
         "Client Management", 
@@ -9,13 +9,15 @@ const Sidebar=({onSelect}) => {
     ];
 
     return(
-        <div className="sidebar">
-            <ul className="list">
+        <div className="flex flex-col w-64 bg-darkgray shadow-md p-4">
+            <ul className="text-lg font-semibold">
                 {list.map((item)=>(
                     <li 
                         key={item} 
                         onClick={()=> onSelect(item)} 
-                        className="selectedItem"
+                        className={`mb-4 cursor-pointer text-blue-900 ${
+                            selectedItem === item ? "font-bold text-xl italic" : ""
+                        }`}
                     >
                         {item}
                     </li>
